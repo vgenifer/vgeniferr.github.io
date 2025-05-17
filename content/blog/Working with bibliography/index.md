@@ -1,5 +1,5 @@
 ---
-title: "Version control. Git."
+title: "Working with bibliography"
 summary: A bibliography is a systematic list of sources consulted during research, crucial for academic credibility and avoiding plagiarism. It differs from "References" by including all sources, not just those directly cited. Key elements include author, title, publication details, and DOI/URL. Common citation styles like MLA, APA, and Chicago each have specific formatting rules. Creating a bibliography involves gathering source information, choosing a style, formatting entries, alphabetizing, and proofreading. Tools like Zotero and Mendeley streamline the process, but careful attention to detail is essential to avoid common mistakes and maintain academic integrity.
 date: "2025-05-10"
 
