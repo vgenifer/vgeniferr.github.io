@@ -30,15 +30,23 @@ bio: My research interests include mathematical logic, calculus and artificial i
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: at-symbol
-    url: 'mailto:your-email@example.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
+  - eLibrary
+    url: https://www.eLibrary.com/
+  - Google Scholar
+  - url: https://www.Google-Scholar.com/
+  - ORCID
+    url: https://www.ORCID.com/
+  - Mendeley
+    url: https://www.Mendeley.com/
+  - ResearchGate
+    url: https://www.ResearchGate.com/
+  - Academia.edu
+    url: https://www.Academia.edu.com/
+  - arXiv
+    url: https://www.arXiv.com/
+  - github
+    url: https://www.github.com/
+    
   # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
   - icon: academicons/cv
     url: uploads/resume.pdf
