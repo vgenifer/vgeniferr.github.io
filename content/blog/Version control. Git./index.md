@@ -2,9 +2,16 @@
 title: "Version control. Git."
 summary: Version control is like a time machine for your projects, and Git is the most popular engine driving that machine. It helps you track changes, collaborate smoothly, and recover from mistakes. Think of it as a super-powered "undo" that saves your bacon (and your codebase) on a regular basis.
 date: "2025-05-10"
+
+# Featured image
+# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+
 authors:
 - admin
-- Ted
+- Genifer
+  
 tags:
 - Academic
 - Hugo Blox
