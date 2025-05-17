@@ -1,157 +1,68 @@
 ---
-title: 📈 Communicate your results effectively with the best data visualizations
-summary: Use popular tools such as Plotly, Mermaid, and data frames.
-date: 2023-10-25
+title: "Version control. Git."
+summary: Version control is like a time machine for your projects, and Git is the most popular engine driving that machine. It helps you track changes, collaborate smoothly, and recover from mistakes. Think of it as a super-powered "undo" that saves your bacon (and your codebase) on a regular basis.
+date: "2025-05-10"
 authors:
-  - admin
+- admin
+- Ted
 tags:
-  - Hugo
-  - Hugo Blox
-  - Markdown
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+- Academic
+- Hugo Blox
+- Markdown
 ---
+Welcome
+11< toc mobile_only=true is_open=true >3}
 
-Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.
+## What is Version Control?
 
-Use popular tools such as Plotly, Mermaid, and data frames.
+Version control (also known as source control) is a system that records changes to a file or set of files over time so that you can recall specific versions later.  Think of it like a sophisticated "undo" button, but for entire projects, not just single actions. It's crucial for software development and any collaborative project where you need to track changes, revert to previous states, and manage contributions from multiple people.
 
-## Charts
+## Why use Version Control?
 
-Hugo Blox supports the popular [Plotly](https://plot.ly/) format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!
+•   Collaboration:  Allows multiple people to work on the same project simultaneously without stepping on each other's toes.
+•   Tracking Changes:  Keeps a detailed history of every modification, including who made the change and why.
+•   Reverting to Previous Versions:  Easily undo mistakes or experiment with new ideas without fear of permanently breaking the code.
+•   Branching and Merging:  Enables developers to create separate lines of development (branches) for new features or bug fixes, and then merge those changes back into the main codebase.
+•   Auditing:  Provides a complete audit trail for compliance or debugging purposes.
+•   Backup and Recovery:  Acts as a reliable backup of your project, protecting against data loss.
 
-Save your Plotly JSON in your page folder, for example `line-chart.json`, and then add the `{{</* chart data="line-chart" */>}}` shortcode where you would like the chart to appear.
+## Git: The King of Version Control Systems
 
-Demo:
+Git is a *distributed* version control system. This means that every developer has a complete copy of the project's history on their local machine. This offers several advantages:
 
-{{< chart data="line-chart" >}}
+•   Offline Work: You can commit changes even without an internet connection.
+•   Speed:  Most operations are performed locally, making them very fast.
+•   Robustness:  Because every developer has a full copy of the repository, data loss is less likely.
 
-You might also find the [Plotly JSON Editor](http://plotly-json-editor.getforge.io/) useful.
+## •   Repository (Repo): A directory containing your project files and the Git database that tracks changes.  There are typically two types:
+    *   Local Repository:  The one on your computer.
+    *   Remote Repository: Hosted on a server (e.g., GitHub, GitLab, Bitbucket).  This is where you share and collaborate.
+•   Commit: A snapshot of your files at a specific point in time.  Commits have a unique ID (SHA-1 hash) and a commit message describing the changes.
+•   Branch:  A pointer to a specific commit.  It represents an independent line of development.  The main (or master) branch is the default branch.
+•   Head:  A pointer to the currently checked-out commit or branch.  It indicates where you're currently working.
+•   Index (Staging Area): A temporary holding area for changes you want to include in your next commit. You add changes to the index using the git add command.
+•   Working Directory:  The directory on your computer where you're actively editing files.
 
-## Diagrams
+## Basic Git Workflow:
 
-Hugo Blox supports the _Mermaid_ Markdown extension for diagrams.
+1.  Initialize a Repository: git init (creates a new Git repository in a directory)
+2.  Clone a Repository: git clone <repository_url> (copies a remote repository to your local machine)
+3.  Make Changes: Edit files in your working directory.
+4.  Stage Changes: git add <file(s)> (adds changes to the index)
+5.  Commit Changes: git commit -m "Descriptive commit message" (creates a snapshot of the staged changes with a message)
+6.  Push Changes: git push origin <branch_name> (sends your local commits to the remote repository)
+7.  Pull Changes: git pull origin <branch_name> (downloads changes from the remote repository to your local machine)
+8.  Branching:  git branch <branch_name> (creates a new branch); git checkout <branch_name> (switches to a branch)
+9.  Merging: git merge <branch_name> (integrates changes from one branch into another)
 
-An example **flowchart**:
+## Remote Repositories (GitHub, GitLab, Bitbucket):
 
-    ```mermaid
-    graph TD
-    A[Hard] -->|Text| B(Round)
-    B --> C{Decision}
-    C -->|One| D[Result 1]
-    C -->|Two| E[Result 2]
-    ```
+These are web-based platforms that provide hosting for Git repositories and offer features like:
 
-renders as
+•   Collaboration Tools:  Issue tracking, pull requests, code review.
+•   Access Control:  Manage who can view or contribute to your project.
+•   Integration:  Integrate with other development tools.
+•   CI/CD (Continuous Integration/Continuous Delivery): Automate testing and deployment.
 
-```mermaid
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
 
-An example **sequence diagram**:
-
-    ```mermaid
-    sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-    ```
-
-renders as
-
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
-
-An example **class diagram**:
-
-    ```mermaid
-    classDiagram
-    Class01 <|-- AveryLongClass : Cool
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
-    Class09 --> C2 : Where am i?
-    Class09 --* C3
-    Class09 --|> Class07
-    Class07 : equals()
-    Class07 : Object[] elementData
-    Class01 : size()
-    Class01 : int chimp
-    Class01 : int gorilla
-    Class08 <--> C2: Cool label
-    ```
-
-renders as
-
-```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-
-An example **state diagram**:
-
-    ```mermaid
-    stateDiagram
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-    ```
-
-renders as
-
-```mermaid
-stateDiagram
-[*] --> Still
-Still --> [*]
-Still --> Moving
-Moving --> Still
-Moving --> Crash
-Crash --> [*]
-```
-
-## Data Frames
-
-Save your spreadsheet as a CSV file in your page's folder and then render it by adding the _Table_ shortcode to your page:
-
-```go
-{{</* table path="results.csv" header="true" caption="Table 1: My results" */>}}
-```
-
-renders as
-
-{{< table path="results.csv" header="true" caption="Table 1: My results" >}}
-
-## Did you find this page helpful? Consider sharing it 🙌
+Released under the [MITI(https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md) license.
